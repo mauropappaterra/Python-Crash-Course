@@ -1,0 +1,2 @@
+Create a new file and write this line on it (Overwrite if the file already exists).
+Append this line to the previously existent file (Create if the file does not exist)

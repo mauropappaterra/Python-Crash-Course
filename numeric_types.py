@@ -66,3 +66,15 @@ print(hexadecimal) # will print as integer by default
 print(hex(hexadecimal))
 
 print(hexadecimal_2) # this are printed as defined
+
+########################################### OTHER
+from random import *
+
+print (randint(1, 100)) # print a random number between and including 1 and 100
+
+
+# Check if an input is an integer in between a determined range
+number = input("Give a number between 1 and 9999")
+while (not (number.isdigit()) or not(1 <= int(number) <= 9999)):
+    number = input("Not a valid input. Give a number between 1 and 9999.")
+print(number)

@@ -2,7 +2,6 @@
 # strings.py
 # Created by Mauro José Pappaterra on 24 February 2017.
 
-
 ############################################ CREATE A STRING
 print ("Hello World!")   # yea
 
@@ -92,7 +91,8 @@ print(string_4.startswith('This')) # true if string starts with 'a'
 print(string_4.endswith('String')) # true if string starts with 'b'
 print(string_4.replace ('not', 'obviously')) # replaces all ocurrences of 'a' with 'b'
 
-print(string_4.split()) # Splits the string with a chosen char creating a List of words
+print(string_4.split('s')) # Splits the string with a chosen char creating a list of new substrings
+print(string_4.split(' ')) # Splits the string with a space char creating a list of words
 print (list(string_4)) # Splits the string into a list of chars
 
 newList = ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'n', 'o', 'w', ' ', 'a', ' ', 'S', 't', 'r', 'i', 'n', 'g']

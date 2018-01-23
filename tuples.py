@@ -18,14 +18,9 @@ print(my_band[-2]) # returns second last element ...
 
 #print(my_band[-9]) # index out of range error
 
-############################################ ADD ELEMENTS
+############################################ ADD/MODIFY/REMOVE ELEMENTS
 # Tuples cannot be modified
 
-############################################ MODIFY ELEMENTS
-# Tuples cannot be modified
-
-############################################ REMOVE ELEMENTS
-# Tuples cannot be modified
 
 ############################################ OTHER STUFF
 print(sorted(my_band)) # temporarily sorts the tuple alphabetically without applying changes
