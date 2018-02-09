@@ -7,6 +7,9 @@
 my_band = ('John L.', 'Paul', 'Ringo', 'John H.') # Works just like a list
 print(my_band)
 
+heterogeneous = (True,66,9.99,'*',"Hello World") # it can be homogeneous or heterogeneous
+print (heterogeneous)
+
 ############################################ RETURN ELEMENTS
 print(my_band[0]) # returns first element
 print(my_band[1]) # returns second element ...

@@ -4,7 +4,10 @@
 
 
 ############################################ CREATE A LIST
-my_list = ['a','b','c','e','f']
+my_list = ['a','b','c','e','f'] # homogeneous list
+print(my_list)
+
+my_list = ['a',2,True,5.6,"Hello World"] # heterogeneous list
 print(my_list)
 
 ############################################ RETURN ELEMENTS
@@ -65,12 +68,18 @@ print(my_list_2)
 
 print(len(my_list_2)) # returns the length of the list
 
+newList = ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'n', 'o', 'w', ' ', 'a', ' ', 'S', 't', 'r', 'i', 'n', 'g']
+print ("".join(newList)) # Joins a list of chars into a string
+
 ############################################ ITERATE A LIST
 
 numbers = range (100001,100100) # creates a list containing a range of numbers
 
 for number in numbers: # iterates on each element on the list
     print (number)
+
+for index, number in enumerate(numbers): # iterates on each element on the list with index
+    print(str(index) + str(number))
 
 ############################################ SLICE A LIST
 

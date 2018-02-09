@@ -42,6 +42,19 @@ print (float + integer)
 print (integer + integer)
 print (float + float)
 
+print (round(0.123456789,0)) # round up round(number,digits)
+print (round(0.123456789,1))
+print (round(0.123456789,2))
+print (round(0.123456789,3))
+print (round(0.123456789,4))
+print (round(0.123456789,5))
+print (round(0.123456789,6))
+print (round(0.123456789,7))
+print (round(0.123456789,8))
+print (round(0.123456789,9))
+
+
+
 ########################################### BINARY NUMBERS
 
 binary = 0b11111111 # 0b for binary
@@ -73,8 +86,16 @@ from random import *
 print (randint(1, 100)) # print a random number between and including 1 and 100
 
 
-# Check if an input is an integer in between a determined range
+# Ask user for input and check for integer in between a determined range
+# (POSITIVE VALUES ONLY)
 number = input("Give a number between 1 and 9999")
 while (not (number.isdigit()) or not(1 <= int(number) <= 9999)):
+    number = input("Not a valid input. Give a number between 1 and 9999.")
+print(number)
+
+# Ask user for input and check if the input is an integer in between a determined range
+# (WITH NEGATIVE VALUES)
+number = input("Give a number between -9999 and 9999")
+while (not (number.lstrip("-").isdigit()) or not(-9999 <= int(number) <= 9999)):
     number = input("Not a valid input. Give a number between 1 and 9999.")
 print(number)

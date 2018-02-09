@@ -80,6 +80,10 @@ for dob in sorted(birthdays.values()): # iterating dictionarie's values in alpha
 for dob in set (birthdays.values()): # using method set() for avoiding repeated values
     print(dob)
 
+for key, value in birthdays.items(): # return dictionary key instead of the value
+    if value == '1992':
+        print (key) # will print all the keys with the value '1992'
+
 ############################################ NESTING
 
 contacts = [contact_1,contact_2,contact_3] # a list of dictionaries
