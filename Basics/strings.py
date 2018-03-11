@@ -59,11 +59,10 @@ sliceMe = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 print(sliceMe[1:4]) # slices string from index x up to and NOT including index y
 print(sliceMe[:3]) # slices string from index 0 up to and NOT including index y
-print(sliceMe[2:]) # slices tuple from index x  up to the last element on the tuple
-print(sliceMe[:]) # returns tuple as it is, this is not very useful
-print(sliceMe[-6:]) # slices tuple from index -2 up to the last element on the tuple
-print(sliceMe[:-6]) # slices tuple from index 0 up to and NOT including index x
-
+print(sliceMe[2:]) # slices string from index x  up to the last element on the tuple
+print(sliceMe[:]) # returns string as it is, this is not very useful
+print(sliceMe[-6:]) # slices string from index -2 up to the last element on the tuple
+print(sliceMe[:-6]) # slices string from index 0 up to and NOT including index x
 
 ############################################ OTHER STUFF
 
@@ -101,3 +100,4 @@ print ("".join(newList)) # Joins a list of chars into a string
 newList = ['This','is','now','a','string']
 print (" ".join(newList)) # This time each element is concatenated with a space character, it could be anything
 
+print ("redrum"[::-1]) # reverse string

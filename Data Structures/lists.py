@@ -5,10 +5,14 @@
 
 ############################################ CREATE A LIST
 my_list = ['a','b','c','e','f'] # homogeneous list
-print(my_list)
+my_list2 = ['a',2,True,5.6,"Hello World"] # heterogeneous list
 
-my_list = ['a',2,True,5.6,"Hello World"] # heterogeneous list
+size = 1000
+empty_list = [None] * size # creates an empty list of size 1000
+
 print(my_list)
+print(my_list2)
+print(empty_list)
 
 ############################################ RETURN ELEMENTS
 print(my_list[0]) # returns first element
@@ -44,8 +48,15 @@ print(my_list)
 del my_list[6] # delete element on index x
 del my_list[-1] # deletes last element on the list
 
+my_list.remove('d') # deletes element by value, only one instance
 
-my_list.remove('d') # deletes element by value
+list_with_ones = [1,2,1,1,1,1,1,1,1,1,3,4,5,6,7,8,1,1,1,1,99]
+list_with_ones = [x for x in list_with_ones if x != 1] # delete all existing instances
+print(list_with_ones)
+
+create_set = set([1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]) # casting the list as a set eliminates repeats, leaving only [1,2]
+print(create_set)
+
 
 print("the last element of the list is the letter " + my_list.pop()) # returns last element, and then deletes it
 
@@ -70,6 +81,12 @@ print(len(my_list_2)) # returns the length of the list
 
 newList = ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'n', 'o', 'w', ' ', 'a', ' ', 'S', 't', 'r', 'i', 'n', 'g']
 print ("".join(newList)) # Joins a list of chars into a string
+
+intList = [1,2,3,4,5,6,7,8,9,0]
+charList = [str(x) for x in intList if True] # ONE-LINER: convert a list of integers into characters
+print(intList)
+print(charList)
+
 
 ############################################ ITERATE A LIST
 

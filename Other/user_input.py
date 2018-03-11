@@ -64,4 +64,4 @@ def text_input():
         line = input()
         text += line + "\n"
 
-    return text[:-8] # use 7 to include line jump \n
+    return text[:-8] # or use 7 to include line jump '\n'

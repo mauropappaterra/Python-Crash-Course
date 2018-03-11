@@ -2,14 +2,27 @@
 # booleans.py
 # Created by Mauro José Pappaterra on 24 February 2017.
 
-
-############################################ CREATE A BOOLEAN
-
-flag = True # assign a boolean value to a variable
+############################################ CREATE A BOOLEAN VARIABLE
+flag = True # assign a boolean value directly to a variable
 selected = False
 
-print (flag)
-print (selected)
+x = 4
+even = (x % 2 == 0) # or indirectly, using boolean operations
+odd = (x % 2 != 0)
+smaller = (x < 100)
+larger = (x > 0)
+is_not = (x != 4)
+equals = (x == 256)
+#... etc
+
+print(flag)
+print(selected)
+print(even)
+print(odd)
+print(smaller)
+print(larger)
+print(is_not)
+print(equals)
 
 ############################################ OPERATIONS RETURNING BOOLEAN VALUES
 
@@ -17,6 +30,8 @@ print (flag == True) # check for equality
 print (selected != False) # check for inequality
 print (not False) # negative Flase: returns True
 print (not True) # negative True: returns False
+
+print ((True and False)) # follows tables of truth logic for all possible cases
 
 my_age = 27
                      # NUMERICAL COMPARISONS
