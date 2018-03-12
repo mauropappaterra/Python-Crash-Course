@@ -2,7 +2,6 @@
 # dictionaries.py
 # Created by Mauro José Pappaterra on 24 February 2017.
 
-
 ############################################ CREATE A DICTIONARY
 
 dictionary = { 'key_1': 'value', 'key_2': 'v', 'key_3': 1 } # a collection of keys => values

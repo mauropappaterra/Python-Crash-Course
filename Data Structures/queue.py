@@ -2,6 +2,7 @@
 # queue.py
 # Created by Mauro J. Pappaterra on 11 of March 2018.
 
+# A Python implementation of a Queue
 
 class queue():
 
@@ -57,14 +58,3 @@ print(q.unqueue())
 print(q.unqueue())
 
 q.print_queue()
-
-
-
-
-
-
-
-
-
-
-

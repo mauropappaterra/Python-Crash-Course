@@ -2,10 +2,11 @@
 # lists.py
 # Created by Mauro José Pappaterra on 24 February 2017.
 
-
 ############################################ CREATE A LIST
-my_list = ['a','b','c','e','f'] # homogeneous list
-my_list2 = ['a',2,True,5.6,"Hello World"] # heterogeneous list
+#Python Lists are just like Java arrays... but...
+
+my_list = ['a','b','c','e','f'] # can be a homogeneous list
+my_list2 = ['a',2,True,5.6,"Hello World"] # or a heterogeneous list
 
 size = 1000
 empty_list = [None] * size # creates an empty list of size 1000
@@ -14,7 +15,7 @@ print(my_list)
 print(my_list2)
 print(empty_list)
 
-############################################ RETURN ELEMENTS
+############################################ RETURN ELEMENTS BY INDEX
 print(my_list[0]) # returns first element
 print(my_list[1]) # returns second element ...
 
@@ -27,16 +28,14 @@ print(my_list[-2]) # returns second last element ...
 
 ############################################ ADD ELEMENTS
 my_list.append('g') # add element to end of the list
-my_list.insert(3,'d') # add element to index x, shift all following elements +1 to the right
+my_list.insert(3,'d') # add element to index i, shift all following elements +1 to the right
 
 new_elements = ['h','i','j','k']
 my_list = my_list + new_elements + ['l','m','n','o']  # + concatenate two or more lists together
 
 print(my_list)
 
-
 ############################################ MODIFY ELEMENTS
-
 my_list[1] = '1' # replaces previous element with new element
 print(my_list)
 
@@ -57,11 +56,8 @@ print(list_with_ones)
 create_set = set([1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]) # casting the list as a set eliminates repeats, leaving only [1,2]
 print(create_set)
 
-
 print("the last element of the list is the letter " + my_list.pop()) # returns last element, and then deletes it
-
 print("the first element of the list is the letter " + my_list.pop(0)) # return element on index x, and then deletes it
-
 print(my_list)
 
 ############################################ OTHER STUFF
@@ -87,9 +83,7 @@ charList = [str(x) for x in intList if True] # ONE-LINER: convert a list of inte
 print(intList)
 print(charList)
 
-
 ############################################ ITERATE A LIST
-
 numbers = range (100001,100100) # creates a list containing a range of numbers
 
 for number in numbers: # iterates on each element on the list
@@ -99,7 +93,6 @@ for index, number in enumerate(numbers): # iterates on each element on the list 
     print(str(index) + str(number))
 
 ############################################ SLICE A LIST
-
 my_list_3 = ['John L.','Paul','Ringo','John H.']
 
 print(my_list_3[1:4]) # slices list from index x up to and NOT including index y
@@ -110,7 +103,6 @@ print(my_list_3[-2:]) # slices list from index -2 up to the last element on the 
 print(my_list_3[:-2]) # slices list from index 0 up to and NOT including index x
 
 ############################################ COPY A LIST
-
 my_list_4 = my_list_3 # this does NOT work on Python, modifying either list would also modify the other
 
 my_list_4.append('Mick')
@@ -122,7 +114,6 @@ my_list_5.append('Keith')
 print(my_list_3)
 
 ############################################ CREATE A MATRIX
-
 matrix = [[1.0,0.0,0.0], [0.3,0.2,0.5], [0.0,0.5,0.5]] # a matrix is a lsit of lists
 
 print (matrix) # iterate a matrix, return complete matrix, raw and element respectively
