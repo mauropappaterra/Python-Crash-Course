@@ -6,74 +6,45 @@
 # A queue is a FIFO data structure. This is a single ended queue.
 # e.g.: 5 -> 4 -> 3 -> 2 -> 1
 
+# This queue uses a Python 'List' data structure
+
 class queue():
 
     def __init__(self, element = None):
         "Class constructor"
-        self.data = element # head of the queue
-        self.tail = None
+        if (element != None):
+            self.data = [element]
+        else:
+            self.data = []
 
     def queue (self, element):
         "Adds element to the tail of the queue"
-        if (self.data == None):
-            self.data = element # if queue is empty add element to head
-            return
-
-        current = self
-
-        while (current.tail != None):
-            current = current.tail # find the tail of the queue
-
-        current.tail = queue(element) # add new element to the tail of the queue
+        self.data.insert(0,element)
 
     def unqueue (self):
         "Pops out element from the head of the queue"
-        if (not self.data == None):
-            data = self.data  # return current element
-
-            if (self.tail == None): # return last element on the queue
-                self.data = None
-                return data
-
-            self.data = self.tail.data # second element becomes new head of the queue
-            self.tail = self.tail.tail
-
-            return data
+        if (not self.is_empty()):
+            return self.data.pop(len(self.data) - 1)
         else:
-            print("The queue is empty!")
+            return None
 
     def is_empty (self):
         "Returns True if the queue is empty"
-        return (self.data == None)
+        return (len(self.data) == 0)
 
     def size(self):
         "Returns size of the queue"
-        if (not self.data == None):
-            counter = 1
-            current = self
-            while (current.tail != None):
-                counter += 1
-                current = current.tail
-
-            return counter
-        else:
-            return 0
+        return len(self.data)
 
     def print_queue (self):
         "Prints contents of the queue"
-        if (self.data != None):
-            elements = [self.data]
+        if (not self.is_empty()):
+            printout = ''
 
-            current = self
-            while(current.tail != None):
-                current = current.tail
-                elements.append(current.data)
-
-            printout =''
-            for element in elements[::-1]:
+            for element in self.data:
                 printout += str(element) + ' -> '
-            print(printout[0:-3])
 
+            print(printout[0:-3])
         else:
             print("The queue is empty!")
 

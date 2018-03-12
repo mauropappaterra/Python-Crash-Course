@@ -3,21 +3,19 @@
 # Created by Mauro J. Pappaterra on 11 of March 2018.
 
 # A Python implementation of a Linked List
+# e.g.: 0 ~ 1 ~ 2 ~ 3 ~ 4 ~ 5 ~ 6
 
 class linkedList():
 
     def __init__ (self, element = None):
         "Class Constructor"
-        if (element != None):
-            self.data = element
-        else:
-            self.data = None
+        self.data = element
         self.next = None
 
     def append (self, element):
         "Appends an element to the (right) end of the list"
         if (self.data == None):
-            self.data = element # if list is empty append to head
+            self.data = element # if list is empty append to head node
             return
 
         current = self
@@ -39,7 +37,7 @@ class linkedList():
         self.next = currentHead
 
     def deleteValue (self, value):
-        "Deletes element of given value from the list"
+        "Deletes single element of a given value from the list"
         if (self.data == None):
             return # exit if linked list is empty
 
@@ -63,6 +61,19 @@ class linkedList():
         "Returns True if the linked list is empty"
         return (self.data == None)
 
+    def size (self):
+        "Returns size of the linked list"
+        if (self.data != None):
+            counter = 1
+
+            current = self
+            while (current.next != None):
+                counter += 1
+                current = current.next
+            return counter
+        else:
+            return 0
+
     def printList (self):
         "Print all contents of the linked list"
         if (self.data != None):
@@ -79,44 +90,58 @@ class linkedList():
             print("The linked list is empty!")
 
 # ALL TESTS
+l1 = linkedList()
 
-l = linkedList()
+l1.append('*')
+l1.append('&')
+l1.append('%')
+l1.printList()
 
-l.append('*')
-l.append('&')
-l.append('%')
-l.printList()
+l1.deleteValue('*')
+l1.deleteValue('&')
+print(l1.isEmpty())
+print (l1.size())
+l1.printList()
 
-l.deleteValue('*')
-l.deleteValue('&')
-print(l.isEmpty())
-l.printList()
 
-l.deleteValue('%')
-print(l.isEmpty())
-l.printList()
+l1.deleteValue('%')
+print(l1.isEmpty())
+print (l1.size())
+l1.printList()
 
-linked = linkedList(1)
-linked.printList()
+l2 = linkedList(1)
+l2.printList()
 
-linked.append(2)
-linked.append(3)
-linked.append(8)
-linked.append(4)
-linked.append(5)
+l2.append(2)
+l2.append(3)
+l2.append(8)
+l2.append(4)
+l2.append(5)
 
-linked.printList()
+l2.printList()
 
-linked.append(6)
-linked.append(7)
+l2.append(6)
+l2.append(7)
 
-linked.printList()
+l2.printList()
 
-linked.deleteValue(1)
-linked.deleteValue(8)
-linked.deleteValue(7)
-linked.printList()
+l2.deleteValue(1)
+l2.deleteValue(8)
+l2.deleteValue(7)
+l2.printList()
 
-linked.prepend(1)
-linked.prepend(0)
-linked.printList()
+l2.prepend(1)
+l2.prepend(0)
+l2.printList()
+print (l2.size())
+
+l3 = linkedList()
+
+l3.append("This")
+l3.append("is")
+l3.append("a")
+l3.append("linked")
+l3.append("list")
+
+l3.printList()
+print (l3.size())
