@@ -16,9 +16,8 @@ class linkedList():
 
     def append (self, element):
         "Appends an element to the (right) end of the list"
-
         if (self.data == None):
-            self.data = element
+            self.data = element # if list is empty append to head
             return
 
         current = self
@@ -30,7 +29,7 @@ class linkedList():
     def prepend (self, element):
         "Prepends an element to the (left) end of the list"
         if (self.data == None):
-            self.data = element
+            self.data = element # if list is empty prepend to head
             return
 
         currentHead = linkedList(self.data) # replicate values of current head
@@ -48,7 +47,7 @@ class linkedList():
             if (self.next != None): # if there are more elements on the list
                 self.data = self.next.data
                 self.next = self.next.next
-            else: # if we are deleting the last element on the list
+            else: # if we are deleting the last element on the linked list
                 self.data = None
             return
 
@@ -59,6 +58,10 @@ class linkedList():
                 current.next = current.next.next
                 return
             current = current.next # otherwise: iterate next node
+
+    def isEmpty(self):
+        "Returns True if the linked list is empty"
+        return (self.data == None)
 
     def printList (self):
         "Print all contents of the linked list"
@@ -86,9 +89,11 @@ l.printList()
 
 l.deleteValue('*')
 l.deleteValue('&')
+print(l.isEmpty())
 l.printList()
 
 l.deleteValue('%')
+print(l.isEmpty())
 l.printList()
 
 linked = linkedList(1)
