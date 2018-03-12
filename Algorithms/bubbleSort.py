@@ -2,13 +2,16 @@
 # bubbleSort.py
 # Created by Mauro J. Pappaterra on 12 of March 2018.
 
-def bubbleSort (array):
+def bubbleSort (array, loop = 0):
     flag = True # a flag to end the recursive call
+    loop -= 1 # on each iteration the largest element will always be sorted, discard last on each iteration
+    # FOR TESTING PURPOSES
+    #print(array[0:loop])
 
-    if (len(array) < 2): # list of 0 or 1 elements are already 'sorted'!
+    if (len(array[0:loop]) < 2): # discard if less than 2 elements are left to be 'sorted'!
         return array
 
-    for i, element in enumerate(array[0:-1]):
+    for i, element in enumerate(array[0:loop]):
         j = i + 1
         # FOR TESTING PURPOSES
         #print(array)
@@ -25,7 +28,7 @@ def bubbleSort (array):
     if (not flag):
         #FOR TESTING PURPOSES
         #print("-> " + str(array))
-        return bubbleSort(array) # recursive call
+        return bubbleSort(array, loop) # recursive call
 
     return array
 
