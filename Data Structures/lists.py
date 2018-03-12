@@ -2,9 +2,9 @@
 # lists.py
 # Created by Mauro José Pappaterra on 24 February 2017.
 
-############################################ CREATE A LIST
 #Python Lists are just like Java arrays... but...
 
+############################################ CREATE A LIST
 my_list = ['a','b','c','e','f'] # can be a homogeneous list
 my_list2 = ['a',2,True,5.6,"Hello World"] # or a heterogeneous list
 

@@ -13,7 +13,7 @@ class BST():
         self.right = None
 
     def insert (self, value):
-        "Insert  value into the BST"
+        "Insert value into the BST"
         if (self.data == None):
             self.data = value
         else:
