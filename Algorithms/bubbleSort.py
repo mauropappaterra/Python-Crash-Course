@@ -46,12 +46,10 @@ bubbleSort(floats)
 print(floats)
 print('\n')
 
-
 print(strings)
 bubbleSort(strings)
 print(strings)
 print('\n')
-
 
 print(booleans)
 bubbleSort(booleans)
