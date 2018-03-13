@@ -23,6 +23,8 @@ stringToInt = [int(x) for x in intString if True] # ONE-LINER: convert a string 
 intString2 = "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
 stringToInt2 = [int(x) for x in intString2.split(' ') if True] # ONE-LINER: convert a string of integers into a list of integers
 
+rangeString = ' '.join([str(x) for x in range(1,101) if True]) # ONE-LINER: create a single string of integers within a given range
+
 print(intList)
 print(addOne)
 print(duplicate)
@@ -41,3 +43,5 @@ print(stringToInt)
 
 print(intString2)
 print(stringToInt2)
+
+print(rangeString)

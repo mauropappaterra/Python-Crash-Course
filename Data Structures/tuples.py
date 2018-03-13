@@ -2,9 +2,8 @@
 # tuples.py
 # Created by Mauro José Pappaterra on 24 February 2017.
 
-
 ############################################ CREATE A TUPLE
-my_band = ('John L.', 'Paul', 'Ringo', 'John H.') # Works just like a list
+my_band = ('John L.', 'Paul M.', 'Ringo S.', 'John H.') # Works just like a list, but tuples can NOT be modified
 print(my_band)
 
 heterogeneous = (True,66,9.99,'*',"Hello World") # it can be homogeneous or heterogeneous
@@ -14,7 +13,7 @@ print (heterogeneous)
 print(my_band[0]) # returns first element
 print(my_band[1]) # returns second element ...
 
-# print(my_band[9]) # index out of range error
+#print(my_band[9]) # index out of range error
 
 print(my_band[-1]) # returns last element
 print(my_band[-2]) # returns second last element ...
@@ -23,7 +22,6 @@ print(my_band[-2]) # returns second last element ...
 
 ############################################ ADD/MODIFY/REMOVE ELEMENTS
 # Tuples cannot be modified
-
 
 ############################################ OTHER STUFF
 print(sorted(my_band)) # temporarily sorts the tuple alphabetically without applying changes

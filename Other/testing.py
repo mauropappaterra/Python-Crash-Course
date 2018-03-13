@@ -3,7 +3,6 @@
 # Created by Mauro J. Pappaterra on 10 of October 2017.
 
 ############################################ UNIT TEST MODULE
-
 import unittest
 
 def myFunction (a):
