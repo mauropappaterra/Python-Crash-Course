@@ -83,8 +83,9 @@ print(hexadecimal_2) # this are printed as defined
 ########################################### OTHER
 from random import *
 
-print (randint(1, 100)) # print a random number between and including 1 and 100
-
+print(random())
+print(randint(1, 100)) # print a random integer number between and including 1 and 100
+print(uniform(0.0,1.0)) # print a random float number between and including 0.0 and 1.0
 
 # Ask user for input and check for integer in between a determined range
 # (POSITIVE VALUES ONLY)

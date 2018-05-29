@@ -65,3 +65,13 @@ def text_input():
         text += line + "\n"
 
     return text[:-8] # or use 7 to include line jump '\n'
+
+# Use a loop to execute code over and over
+again = True
+while (again):
+    # The code you wanna loop goes here
+    again = input("\nWant to play again? y/n\n").lower()
+    while (again != 'y' and again != 'n'):
+        again = input("Not a valid option. Enter 'y' for yes or 'n' for no!").lower()
+    again = (again == 'y')
+print("\n-EXIT BY USER-")

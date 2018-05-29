@@ -25,7 +25,7 @@ myFile.close() # close file
 
 #as a single loop
 with open (path, mode) as newFile:
-    samples = (newFile.readline())
+    samples = (newFile.readlines())
     print(samples)
 
 ############################################ OPEN FILE ON WRITE/APPEND MODE
