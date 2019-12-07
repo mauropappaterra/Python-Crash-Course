@@ -53,6 +53,8 @@ print (round(0.123456789,7))
 print (round(0.123456789,8))
 print (round(0.123456789,9))
 
+import math
+math.floor(7 / 3) # round downs to 2
 
 
 ########################################### BINARY NUMBERS

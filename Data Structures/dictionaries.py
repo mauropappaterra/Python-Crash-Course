@@ -93,7 +93,7 @@ for contact in contacts:
     print (contact)
 
 car = { # a dictionary of lists
-    'make': ['BMW','Ferrari','Mustang','Laborghini','Audi'],
+    'make': ['BMW','Ferrari','Mustang','Lamborghini','Audi'],
     'color': ['red','white','blue'],
     'year': [range(1954,2017)]
 }
@@ -125,3 +125,19 @@ for user, user_info in sorted(users.items()):
     print ('\n' + user)
     print ('Username: ' + user_info['username'])
     print ('Password: ' + user_info['password'])
+
+############################################ SORTING
+
+
+dic_array = [
+    {'name':'John', 'age':29},
+    {'name':'Vivian', 'age':39},
+    {'name':'Ally', 'age':39},
+    {'name':'Manny', 'age':13},
+    {'name':'Albert', 'age':76}
+    ]
+
+sorted(dic_array, key=lambda i: i['age']) # sort by age
+sorted(dic_array, key=lambda i: (i['age'], i['name'])) # sort by age then name
+sorted(dic_array, key=lambda i: (i['name'], i['age'])) # sort by name then age
+sorted(dic_array, key=lambda i: i['age'], reverse=True) # sort by age descending

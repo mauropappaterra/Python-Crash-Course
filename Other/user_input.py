@@ -31,7 +31,7 @@ def ask_int (min, max):
         print("ERROR MESSAGE")
         number = input()
 
-    return number
+    return int(number)
 
 # Let user choose among specific character, string or number
 print("Choose '1','2','3','a','b' or 'this string'")

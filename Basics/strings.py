@@ -101,3 +101,14 @@ newList = ['This','is','now','a','string']
 print (" ".join(newList)) # This time each element is concatenated with a space character, it could be anything
 
 print ("redrum"[::-1]) # reverse string
+
+############################################ RANDOM STRINGS
+import random as r
+import string as s
+
+random_lowercase_size_10 = ''.join(r.choices(s.ascii_lowercase, k=10))
+random_uppercase_size_20 = ''.join(r.choices(s.ascii_uppercase, k=20))
+random_multicase_size_30 = ''.join(r.choices(s.ascii_letters, k=30))
+random_digits_multisize_1to100 = ''.join(r.choices(s.digits, k=r.randint(1, 100)))
+
+random_all = ''.join(r.choices(s.ascii_letters + s.digits, k=r.randint(1, 20)))

@@ -92,6 +92,16 @@ for number in numbers: # iterates on each element on the list
 for index, number in enumerate(numbers): # iterates on each element on the list with index
     print(str(index) + str(number))
 
+# Create an empty list of size X and fill it in with 'something'
+
+new_list = []
+size = 1000000
+
+while (size > 0):
+    new_list.append('something')
+    size -=1
+
+
 ############################################ SLICE A LIST
 my_list_3 = ['John L.','Paul','Ringo','John H.']
 
