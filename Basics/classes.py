@@ -39,10 +39,11 @@ first.attribute_1 = 'yellow'  # modifies an attribute from a class instance
 
 ############################################ INHERITANCE
 
-class mySubClass (): # Creating a subclass on Python
+class mySubClass (myClass): # Creating a subclass on Python
 
-    def __init__(self, attribute_1, attribute_2):        # This is how we define a sublass on Python
-        super().__init__(self, attribute_1, attribute_2) # all methods and attributes from the parent class
+    #def __init__(self, attribute_1, attribute_2):        # This is how we define a sublass on Python
+        #super()
+        #self.__init__(self, attribute_1, attribute_2) # all methods and attributes from the parent class
                                                          # myClass will be inherited!
 
     def set_attribute_1(self, color): # Setters and Getters

@@ -28,6 +28,22 @@ with open (path, mode) as newFile:
     samples = (newFile.readlines())
     print(samples)
 
+# read an external json file
+import json
+
+with open("path/file.json") as file:
+    data = json.load(file)
+
+print(data["plain"]) # reads plain json entry
+
+for element in data["array"]: # iterates json array
+    print (element)
+
+print(data["nested"]["one"]) # reads nested json
+print(data["nested"]["two"])
+print(data["nested"]["three"])
+print(data["nested"]["four"]["five"])
+
 ############################################ OPEN FILE ON WRITE/APPEND MODE
 
 path = "path/example_1.txt"
